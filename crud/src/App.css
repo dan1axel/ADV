@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+
+.container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+h1 {
+  color: #000;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+li {
+  color: #000000;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+input {
+  padding: 5px;
+  margin-right: 5px;
+}
+
+
+button {
+  padding: 5px;
+  background-color: #008000; /* Change the background color to green */
+  color: #000000; /* Set the font color to white */
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
