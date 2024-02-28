@@ -1,0 +1,162 @@
+
+button {
+    margin-left: 4px;
+    background-color: #436850;
+    padding: 8px;
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 5px;
+  }
+  
+  input {
+    max-width: 80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 5px;
+  }
+  
+  .input-container input {
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .edit-container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .edit-container input {
+    width: 100%; 
+    word-wrap: break-word;
+    overflow: hidden; 
+    white-space: normal;
+  }
+  
+  .edit-buttons {
+    width: 20%;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #436850;
+    color: #fff;
+  }
+  
+  .add-button {
+    width: 20%;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #436850;
+    color: #fff;
+  }
+  
+  .todo-list-item {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    width: auto;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    white-space: normal;
+  
+  }
+  
+  .todo-text {
+    color: black;
+    flex-grow: 1;
+    word-wrap: break-word;
+    overflow: hidden;
+  }
+  
+  .todo-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .complete-container {
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    word-wrap: break-word;
+    overflow: hidden;
+  }
+  
+  .complete-2 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .complete-text {
+    flex-grow: 1; 
+    word-wrap: break-word;
+    overflow: hidden;
+  }
+  
+  .complete-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .complete-buttons button {
+    margin-left: 5px;
+  }
+  
+  .modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .delete-confirmation-modal {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 80%; /* Add this line to limit the width and allow the modal to expand */
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: normal;
+  }
+  
+  .delete-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .delete-buttons button {
+    margin: 0 2px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #436850;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+  }

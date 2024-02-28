@@ -1,81 +1,40 @@
 import React, { useState } from 'react';
+import TodoList from './components/TodoList';
+import TabButton from './components/TabButton';
+import Completed from './components/Completed';
 import './App.css';
 
+const TODO = {
+  LIST: 'To-Do List',
+  COMPLETED: 'Complete',
+}
 
-const TodoList = () => {
-  const [todos, setTodos] = useState([]);
-  const [newTodo, setNewTodo] = useState('');
-  const [editingIndex, setEditingIndex] = useState(null);
-
-
-  const addTodo = () => {
-    if (editingIndex !== null) {
-      // Update existing todo
-      const updatedTodos = [...todos];
-      updatedTodos[editingIndex] = newTodo;
-      setTodos(updatedTodos);
-      setEditingIndex(null);
-    } else {
-      // Add new todo
-      setTodos([...todos, newTodo]);
-    }
-
-
-    // Clear the input field
-    setNewTodo('');
-  };
-
-
-  const editTodo = (index) => {
-    setNewTodo(todos[index]);
-    setEditingIndex(index);
-  };
-
-
-  const deleteTodo = (index) => {
-    const updatedTodos = [...todos];
-    updatedTodos.splice(index, 1);
-    setTodos(updatedTodos);
-  };
-
+function App() {
+  const [tab, setTab] = useState(TODO.LIST);
 
   return (
-    <div>
-    <h1>Todo List</h1>
-      <ul>{todos.map((todo, index) => (
-          <li key={index}>
-            {todo}
-            <div>
-              <button onClick={() => editTodo(index)}>Edit</button>
-              <button onClick={() => deleteTodo(index)}>Delete</button>
-            </div>
-          </li>
-        ))}
-      </ul>
-      <div style={{ textAlign: 'center', padding: '10px' }}>
-        <input
-          type="text"
-          value={newTodo}
-          onChange={(e) => setNewTodo(e.target.value)}
-          style={{ padding: '5px', marginRight: '5px' }}
+    <div className="container">
+      <h1>Todo App</h1>
+      <ul className="tab">
+        <TabButton
+          tabName={TODO.LIST}
+          tab={tab}
+          setTab={setTab}
         />
-        <button
-          onClick={addTodo}
-          style={{
-            padding: '5px',
-            background: '#4caf50',
-            color: '#fff',
-            border: 'none',
-            borderRadius: '3px',
-            cursor: 'pointer',
-          }}
-        >
-          {editingIndex !== null ? 'Update' : 'Add'}
-        </button>
-      </div>
+        <TabButton
+          tabName={TODO.COMPLETED}
+          tab={tab}
+          setTab={setTab}
+        />
+      </ul>
+      {tab === TODO.LIST && (
+        <TodoList/>
+      )}
+      {tab === TODO.COMPLETED && (
+        <Completed/>
+      )}
     </div>
   );
-};
+}
 
-
-export default TodoList;
+export default App;
